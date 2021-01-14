@@ -24,14 +24,18 @@ PATHS:
   images:
     - "src/img/**/*"
   sass:
+    foundation:
+      - "node_modules/foundation-sites/scss"
     fontawesome:
       - "node_modules/@fortawesome/fontawesome-free/scss"
   javascript:
+    vendors:
+      - "node_modules/what-input/dist/what-input.js"
+      - "node_modules/foundation-sites/dist/js/foundation.js"
     theme:
       - "src/js/customizer.js"
-      - "src/js/navigation.js"
-#    custom:
-#      - "src/js/**/_*.js"
+    custom:
+      - "src/js/**/_*.js"
   fonts:
     fontawesome:
       - "node_modules/@fortawesome/fontawesome-free/webfonts/*"

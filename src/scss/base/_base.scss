@@ -1,24 +1,14 @@
-/* Box Sizing
---------------------------------------------- */
-@import 'box-sizing';
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+a {
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
 
-/* Typography
---------------------------------------------- */
-@import 'typography/typography';
+.post-password-form {
+  [type="submit"] {
+    @include button();
+  }
+}
 
-/* Elements
---------------------------------------------- */
-@import 'elements/body';
-@import 'elements/hr';
-@import 'elements/lists';
-@import 'elements/media';
-@import 'elements/tables';
-
-/* Links
---------------------------------------------- */
-@import 'elements/links';
-
-/* Forms
---------------------------------------------- */
-@import 'elements/buttons';
-@import 'elements/fields';

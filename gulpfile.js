@@ -87,6 +87,17 @@ gulp.task(
 gulp.task('styles', gulp.series('sass:style', 'sass:fontawesome', 'copy:fonts'));
 
 gulp.task(
+  'javascript:vendors',
+  function () {
+    return gulp.src( PATHS.javascript.vendors )
+      .pipe( $.sourcemaps.init() )
+      .pipe( $.if( PRODUCTION, $.uglify( {'mangle': false} ) ) )
+      .pipe( $.if( ! PRODUCTION, $.sourcemaps.write() ) )
+      .pipe( gulp.dest( 'assets/js' ) )
+  }
+);
+
+gulp.task(
   'javascript:theme',
   function () {
     return gulp.src(PATHS.javascript.theme)
@@ -97,8 +108,21 @@ gulp.task(
   }
 );
 
+gulp.task(
+  'javascript:custom',
+  function () {
+    return gulp.src( PATHS.javascript.custom )
+      .pipe( $.sourcemaps.init() )
+      .pipe( $.concat( 'scripts.js' ) )
+      .pipe( gulp.dest( 'assets/js' ) )
+      .pipe( $.if( PRODUCTION, $.uglify( {'mangle': false} ) ) )
+      .pipe( $.if( ! PRODUCTION, $.sourcemaps.write() ) )
+      .pipe( gulp.dest( 'assets/js' ) )
+  }
+);
+
 // Compiles JavaScript into a single file
-gulp.task('javascript', gulp.series('javascript:theme'));
+gulp.task('javascript', gulp.series('javascript:vendors', 'javascript:theme', 'javascript:custom'));
 
 // Scan the theme and create a POT file.
 function translate() {

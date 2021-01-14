@@ -1,0 +1,24 @@
+// XY grid CSS is generated with a powerful set of Sass mixins, which you can use in your own code to build a semantic grid.
+// @link https://get.foundation/sites/docs/xy-grid.html#building-semantically
+.container {
+  @include xy-grid-container;
+
+  .inner-container {
+    @include xy-grid;
+  }
+
+  .site-main,
+  .widget-area {
+    @include xy-cell();
+  }
+
+  @include breakpoint(medium) {
+    .site-main {
+      @include xy-cell(8);
+    }
+
+    .widget-area {
+      @include xy-cell(4);
+    }
+  }
+}
