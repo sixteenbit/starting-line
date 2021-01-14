@@ -1,0 +1,24 @@
+@import 'components';
+
+$flex: true;
+$prototype: false;
+$xy-grid: $xy-grid;
+
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-table;
+
+@include foundation-menu;
+@include foundation-dropdown-menu;
+
+// Helpers
+@include foundation-float-classes;
+@if $flex {
+  @include foundation-flex-classes;
+}
+@include foundation-visibility-classes;
+@if $prototype {
+  @include foundation-prototype-classes;
+}

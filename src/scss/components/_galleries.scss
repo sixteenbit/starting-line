@@ -1,0 +1,23 @@
+.gallery {
+  display: grid;
+  margin-bottom: $global-margin;
+  grid-gap: $global-margin;
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+
+  .gallery-columns-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+.gallery-caption {
+  display: block;
+}
