@@ -1,0 +1,36 @@
+.sticky {
+  display: block;
+}
+
+.post,
+.page {
+  margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  @include clearfix();
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.entry-footer {
+  @include clearfix();
+}
+
+.comments-link {
+  float: right;
+}
+
+.edit-link {
+  display: block;
+}

@@ -1,0 +1,51 @@
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  max-width: 100%;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  background: $color--background-pre;
+  overflow: auto;
+  font-family: $font--pre;
+  line-height: $font--line-height-pre;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: $font--code;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $color--border-abbr;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $color--background-ins;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}

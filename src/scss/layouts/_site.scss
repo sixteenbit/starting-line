@@ -1,0 +1,7 @@
+.site {
+  max-width: $size--site-main;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@import 'site-header';
