@@ -163,3 +163,18 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+/**
+ * Adds 'no-js' class.
+ *
+ * If we're missing JavaScript support, the HTML element will have a 'no-js' class.
+ */
+function starting_line_no_js_class() {
+
+	?>
+  <script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+	<?php
+
+}
+
+add_action( 'wp_head', 'starting_line_no_js_class' );

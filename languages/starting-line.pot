@@ -76,15 +76,47 @@ msgstr ""
 msgid "Copyright &copy; %s. All rights reserved."
 msgstr ""
 
-#: functions.php:54
+#: functions.php:57
 msgid "Primary"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:58
+msgid "Social Links"
+msgstr ""
+
+#: functions.php:144
+msgctxt "Theme starter content"
+msgid "Mountains"
+msgstr ""
+
+#: functions.php:148
+msgctxt "Theme starter content"
+msgid "Espresso"
+msgstr ""
+
+#: functions.php:152
+msgctxt "Theme starter content"
+msgid "Sandwich"
+msgstr ""
+
+#: functions.php:156
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr ""
+
+#: functions.php:172
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:184
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:231
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:233
 msgid "Add widgets here."
 msgstr ""
 
