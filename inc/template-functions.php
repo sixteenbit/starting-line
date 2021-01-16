@@ -17,9 +17,9 @@ function starting_line_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
+	// Check whether we're singular.
+	if ( is_singular() ) {
+		$classes[] = 'singular';
 	}
 
 	return $classes;
@@ -35,3 +35,22 @@ function starting_line_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'starting_line_pingback_header' );
+
+
+/**
+ * Renames sticky class.
+ *
+ * @param $classes
+ *
+ * @return array
+ */
+function starting_line_change_sticky_class( $classes ) {
+	if ( in_array( 'sticky', $classes, true ) ) {
+		$classes   = array_diff( $classes, array( 'sticky' ) );
+		$classes[] = 'sticky-post';
+	}
+
+	return $classes;
+}
+
+add_filter( 'post_class', 'starting_line_change_sticky_class' );

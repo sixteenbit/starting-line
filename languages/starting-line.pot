@@ -13,15 +13,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:17
+#: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:20
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:30
+#: 404.php:29
 msgid "Most Used Categories"
 msgstr ""
 
@@ -76,15 +76,47 @@ msgstr ""
 msgid "Copyright &copy; %s. All rights reserved."
 msgstr ""
 
-#: functions.php:54
+#: functions.php:57
 msgid "Primary"
 msgstr ""
 
+#: functions.php:58
+msgid "Social Links"
+msgstr ""
+
 #: functions.php:129
+msgctxt "Theme starter content"
+msgid "Mountains"
+msgstr ""
+
+#: functions.php:133
+msgctxt "Theme starter content"
+msgid "Espresso"
+msgstr ""
+
+#: functions.php:137
+msgctxt "Theme starter content"
+msgid "Sandwich"
+msgstr ""
+
+#: functions.php:141
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr ""
+
+#: functions.php:157
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:169
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:216
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:218
 msgid "Add widgets here."
 msgstr ""
 
@@ -93,7 +125,7 @@ msgid "Skip to content"
 msgstr ""
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:20
 msgid "Search Results for: %s"
 msgstr ""
 

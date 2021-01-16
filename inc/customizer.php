@@ -32,6 +32,7 @@ function starting_line_customize_register( $wp_customize ) {
 		);
 	}
 }
+
 add_action( 'customize_register', 'starting_line_customize_register' );
 
 /**
@@ -56,6 +57,7 @@ function starting_line_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function starting_line_customize_preview_js() {
-	wp_enqueue_script( 'starting-line-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'starting-line-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), wp_get_theme()->get( 'Version' ), true );
 }
+
 add_action( 'customize_preview_init', 'starting_line_customize_preview_js' );
