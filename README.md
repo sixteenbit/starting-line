@@ -2,8 +2,6 @@
 
 > The worst is over
 
-![Starting Line](screenshot.png)
-
 ## Features
 
 - Build workflow using [gulp.js](https://gulpjs.com/)
@@ -15,39 +13,39 @@
 
 ## Getting started
 
-This theme isn't meant to be used _as_ a theme but to be used as a starting point for a new theme. Clone it, run `yarn`, change settings in `config.yml` and run `gulp rename:theme` to change the name.
+### Clone the repository into wp-content/themes/awesome-theme
 
 ```bash
-# Clone the repository into wp-content/themes
-git clone https://github.com/sixteenbit/starting-line.git
+git clone https://github.com/sixteenbit/starting-line.git awesome-theme
 ```
 
+### Run yarn to grab all dependencies
+
 ```bash
-# From the root of wp-content/themes/starting-line run the following:
 yarn
 ```
 
-## Commands
+### Update theme name in config.yml
+
+```yaml
+# Theme strings used in the `rename` gulp task
+THEME:
+  ## The current strings in the theme
+  CURRENT:
+    name: "Starting Line"
+    slug: "starting-line"
+    prefix: "starting_line_"
+    class: "SL_"
+  ## The strings to rename in the theme
+  NEW:
+    name: "Awesome Theme"
+    slug: "awesome-theme"
+    prefix: "awesome_theme_"
+    class: "AT_"
+```
+
+### Run the task to rename
 
 ```bash
-# Removes the release dir and builds the project
-gulp
-
-# Builds the project
-gulp build
-
-# Runs the build task and watches for file changes
-gulp watch
-
-# Runs the styles task
-gulp styles
-
-# Runs the javascript task
-gulp javascript
-
-# Starts Browsersync
-gulp server
-
-# Copy theme to release folder for production
-gulp release --production
+gulp rename:theme
 ```

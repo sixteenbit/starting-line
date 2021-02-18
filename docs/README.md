@@ -13,18 +13,43 @@
 
 ## Getting started
 
-This theme isn't meant to be used _as_ a theme but to be used as a starting point for a new theme. Clone it, run `yarn`, change settings in `config.yml` and run `gulp rename:theme` to change the name.
+This theme isn't meant to be used _as_ a theme but to be used as a starting point for a new theme.
 
-### Clone the repository into wp-content/themes
+### Clone the repository into wp-content/themes/awesome-theme
 
 ```bash
-git clone https://github.com/sixteenbit/starting-line.git
+git clone https://github.com/sixteenbit/starting-line.git awesome-theme
 ```
 
-### From the root of wp-content/themes/starting-line run the following:
+### Run yarn to grab all dependencies
 
 ```bash
 yarn
+```
+
+### Update theme name in config.yml
+
+```yaml
+# Theme strings used in the `rename` gulp task
+THEME:
+  ## The current strings in the theme
+  CURRENT:
+    name: "Starting Line"
+    slug: "starting-line"
+    prefix: "starting_line_"
+    class: "SL_"
+  ## The strings to rename in the theme
+  NEW:
+    name: "Awesome Theme"
+    slug: "awesome-theme"
+    prefix: "awesome_theme_"
+    class: "AT_"
+```
+
+### Run the task to rename
+
+```bash
+gulp rename:theme
 ```
 
 ## Commands
@@ -65,7 +90,7 @@ gulp javascript
 gulp server
 ```
 
-### Copy theme to release folder for production
+### Copy theme to dist folder for production
 
 ```bash
 gulp release --production
