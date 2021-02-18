@@ -108,7 +108,7 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:166, header.php:72
+#: functions.php:166, header.php:73
 msgid "Social Links Menu"
 msgstr ""
 
