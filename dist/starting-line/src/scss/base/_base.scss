@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+a {
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.post-password-form {
+  [type="submit"] {
+    @include button();
+  }
+}
+

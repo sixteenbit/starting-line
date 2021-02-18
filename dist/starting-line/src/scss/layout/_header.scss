@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.site-header {
+  position: relative;
+  padding: $global-padding 0;
+
+  .site-title {
+    margin-bottom: 0;
+    font-size: rem-calc(21);
+    font-weight: $global-weight-bold;
+    color: $body-font-color;
+
+    & > a {
+      color: $body-font-color;
+
+      @include on-event() {
+        color: $anchor-color-hover;
+      }
+    }
+  }
+}

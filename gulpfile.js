@@ -25,7 +25,7 @@ function loadConfig() {
 // Delete the "release" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf('release', done);
+  rimraf('dist', done);
 }
 
 gulp.task(
@@ -152,9 +152,9 @@ gulp.task(
 gulp.task(
   'release:zip',
   function () {
-    return gulp.src('release/**')
+    return gulp.src('dist/**')
       .pipe(zip(THEME.CURRENT.slug + '.zip'))
-      .pipe(gulp.dest('release'))
+      .pipe(gulp.dest('dist'))
   }
 );
 
@@ -169,13 +169,15 @@ gulp.task(
         '!gulpfile.js',
         '!package.json',
         '!yarn.lock',
-        '!release',
-        '!release/**/*',
+        '!dist',
+        '!dist/**/*',
+        '!docs',
+        '!docs/**/*',
         '!node_modules',
         '!node_modules/**/*'
       ]
     )
-      .pipe(gulp.dest('release/' + THEME.CURRENT.slug))
+      .pipe(gulp.dest('dist/' + THEME.CURRENT.slug))
   }
 );
 
