@@ -1,4 +1,4 @@
-# Your project's server will run on localhost:xxxx at this port
+# Your project's server URL
 URL: "https://sixteenbit.ddev.site"
 
 # Theme strings used in the `rename` gulp task
@@ -15,6 +15,11 @@ THEME:
     slug: "starting-line"
     prefix: "starting_line_"
     class: "SL_"
+
+# Used in the theme .pot file for translation
+POT:
+  domain: 'starting-line'
+  package: 'starting-line'
 
 # Gulp will reference these paths when it copies files
 PATHS:
@@ -39,8 +44,3 @@ PATHS:
   fonts:
     fontawesome:
       - "node_modules/@fortawesome/fontawesome-free/webfonts/*"
-
-# Used in the theme .pot file for translation
-POT:
-  domain: 'starting-line'
-  package: 'starting-line'
