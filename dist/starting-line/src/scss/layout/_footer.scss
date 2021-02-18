@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.site-footer {
+  padding: $global-padding 0;
+
+  .copyright {
+    font-size: rem-calc(14);
+  }
+}

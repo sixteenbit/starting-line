@@ -2,7 +2,6 @@
 .idea
 node_modules/
 npm-debug.log
-dist/
 assets/
 languages/*.pot
 style-rtl.css

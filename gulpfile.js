@@ -171,6 +171,8 @@ gulp.task(
         '!yarn.lock',
         '!dist',
         '!dist/**/*',
+        '!docs',
+        '!docs/**/*',
         '!node_modules',
         '!node_modules/**/*'
       ]

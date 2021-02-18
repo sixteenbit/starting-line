@@ -1,0 +1,42 @@
+/*!
+Theme Name: Starting Line
+Theme URI: https://sixteenbit.github.io/starting-line/
+Author: Sixteenbit
+Author URI: https://sixteenbit.com
+Description: A starter theme called Starting Line.
+Version: 0.1.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: starting-line
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+// Import variables and mixins.
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// Vendors
+@import 'vendors/foundation/foundation';
+
+// Base stuff
+@import 'base/base';
+
+// Layout
+@import 'layout/structure';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/posts-pages';
+@import 'layout/footer';
+
+// Components
+@import 'components/accessibility';
+@import 'components/alignments';
+@import 'components/comments';
+@import 'components/media';
+@import 'components/galleries';
+@import 'components/infinite-scroll';
