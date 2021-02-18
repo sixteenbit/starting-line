@@ -69,7 +69,7 @@
       <?php endif; ?>
 
       <?php if ( has_nav_menu( 'social' ) ) : ?>
-        <nav class="social-navigation show-for-medium" aria-label="<?php esc_html_e( 'Social Links Menu', 'luci' ); ?>">
+        <nav class="social-navigation show-for-medium" aria-label="<?php esc_html_e( 'Social Links Menu', 'starting-line' ); ?>">
           <?php
           wp_nav_menu(
             array(
