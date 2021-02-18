@@ -2,4 +2,8 @@
 .idea
 node_modules/
 npm-debug.log
-release/
+dist/
+assets/
+languages/*.pot
+style-rtl.css
+style.css
